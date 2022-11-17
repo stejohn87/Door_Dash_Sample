@@ -1,0 +1,22 @@
+SELECT 
+  substr(Customer_placed_order_datetime,1,2) as cust_order_day
+  ,substr(Customer_placed_order_datetime, 4) as cust_order_time   
+  ,substr(Placed_order_with_restaurant_datetime,1,2) as res_order_day
+  ,substr(Placed_order_with_restaurant_datetime,4) as res_order_time
+  ,substr(Driver_at_restaurant_datetime, 1,2) as driver_arrive_day
+  ,substr(Driver_at_restaurant_datetime,4) as driver_arrive_time
+  ,substr(Delivered_to_consumer_datetime,1,2) as delivery_day
+  ,substr(Delivered_to_consumer_datetime,4) as delivery_time
+  ,Driver_ID
+  ,Restaurant_ID
+  ,Consumer_ID
+  ,Delivery_Region
+  ,Is_ASAP
+  ,Order_total
+  ,Amount_of_discount
+  ,Refunded_amount
+  ,Amount_of_tip
+FROM 
+  `endless-bonus-322515.DoorDash.door_dash_sample` 
+where 
+   1=1 
